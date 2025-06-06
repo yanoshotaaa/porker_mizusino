@@ -1,3 +1,28 @@
+// --- Firebase初期化 ---
+const firebaseConfig = {
+  apiKey: "AIzaSyDk1TE3o4kmJ_rdYBtj91ja8kdRk_yAPsyY",
+  authDomain: "porkerapp-445c0.firebaseapp.com",
+  projectId: "porkerapp-445c0",
+  storageBucket: "porkerapp-445c0.appspot.com",
+  messagingSenderId: "377509457953",
+  appId: "1:377509457953:web:c9ecdc54e6b1627d74f360",
+  measurementId: "G-E38787RBJQ"
+};
+if (typeof firebase !== 'undefined') {
+  firebase.initializeApp(firebaseConfig);
+  var db = firebase.firestore();
+}
+
+async function saveHandToFirestore(handData) {
+  if (!db) return;
+  try {
+    await db.collection('poker_games').add(handData);
+    console.log('Firestoreに保存しました');
+  } catch (e) {
+    console.error('Firestore保存エラー:', e);
+  }
+}
+
 // --- 設定値 ---
 const PLAYER_NUM = 6;
 const START_STACK = 100;
@@ -335,6 +360,24 @@ function renderGame() {
         profit: profit,
         board: [...state.board]
       });
+      // Firestore用データ整形
+      const handData = {
+        userId: "test_user", // 必要に応じてユーザーIDを動的に
+        players: state.players.map(p => ({
+          name: p.name,
+          position: p.position,
+          hand: p.hand,
+          stack: p.stack,
+          isUser: p.isUser
+        })),
+        board: [...state.board],
+        pot: state.pot,
+        stage: state.stage,
+        isFinished: true,
+        date: new Date(),
+        additionalData: {}
+      };
+      saveHandToFirestore(handData);
       state.loggedHistory = true;
     }
     return;
