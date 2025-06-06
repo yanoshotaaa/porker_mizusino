@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+  <meta name="theme-color" content="#1976d2">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+  <title>テキサスホールデム デモ</title>
+</head>
+
+<body>
+  <header>
+    <h1>テキサスホールデム デモ</h1>
+    <button id="reset-btn">新しくゲーム開始</button>
+    <button id="show-history-btn" class="header-history-btn">対戦履歴を見る</button>
+    <!-- 例: header内に追加 -->
+    <button id="export-history-btn" class="header-export-btn">履歴エクスポート</button>
+
+  </header>
+  <main>
+    <section id="game-section"></section>
+    <section id="history-section" style="display: none;">
+      <h2>全対戦履歴（振り返り）</h2>
+      <div style="margin-bottom:10px;">
+        <label>収支で絞り込み
+          <input type="number" id="min-profit" placeholder="最小" style="width:60px;">
+          〜
+          <input type="number" id="max-profit" placeholder="最大" style="width:60px;">
+          <button id="filter-btn">絞り込み</button>
+        </label>
+      </div>
+      <div id="history-list"></div>
+      <div id="history-detail" style="display:none;"></div>
+      <button id="back-to-game-btn">ゲームに戻る</button>
+    </section>
+  </main>
+  <script src="app.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('sw.js');
+    }
+  </script>
+</body>
+
+</html>

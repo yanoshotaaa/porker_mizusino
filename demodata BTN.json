@@ -1,0 +1,446 @@
+{
+  "metadata": {
+    "appName": "テキサスホールデム デモ（ポジションローテーション対応）",
+    "exportVersion": "3.0",
+    "exportDate": "2025-06-03T14:43:45.069Z",
+    "dataDescription": "ポーカーゲームの詳細履歴データ（ポジションローテーション、プレイヤーハンド、アクション、チップ変動を含む）"
+  },
+  "overallStats": {
+    "totalHands": 1,
+    "userStats": {
+      "totalProfit": null,
+      "handsWon": 0,
+      "averageProfit": null
+    },
+    "exportTimestamp": "2025-06-03T14:43:45.069Z"
+  },
+  "hands": [
+    {
+      "gameInfo": {
+        "handNumber": 1,
+        "dealerPosition": 0,
+        "timestamp": "2025-06-03T14:43:40.302Z",
+        "gameSettings": {
+          "playerCount": 6,
+          "startingStack": 100,
+          "smallBlind": 1,
+          "bigBlind": 3,
+          "ante": 3
+        }
+      },
+      "gameStats": {
+        "handNumber": 1,
+        "dealerPosition": 0,
+        "dealerName": "あなた",
+        "boardCards": [
+          "2♦",
+          "2♣",
+          "Q♥",
+          "J♣",
+          "K♠"
+        ],
+        "numberOfPlayers": 6,
+        "playersWhoFolded": 4,
+        "playersInShowdown": 2
+      },
+      "playerDetails": [
+        {
+          "playerInfo": {
+            "name": "あなた",
+            "position": "BTN",
+            "isUser": true
+          },
+          "chipInfo": {
+            "startingStack": 100,
+            "profit": null,
+            "anteAndBlinds": 3
+          },
+          "handInfo": {
+            "holeCards": [
+              "A♠",
+              "8♥"
+            ],
+            "folded": false,
+            "showedDown": false
+          },
+          "actionSummary": {
+            "folds": 0,
+            "calls": 0,
+            "raises": 1,
+            "totalAmountBet": 19
+          },
+          "detailedActions": [
+            {
+              "player": "あなた",
+              "stage": "プリフロップ",
+              "action": "raise",
+              "amount": 9,
+              "stack": 88
+            },
+            {
+              "player": "あなた",
+              "stage": "フロップ",
+              "action": "bet",
+              "amount": 10,
+              "stack": 78
+            },
+            {
+              "player": "あなた",
+              "stage": "ターン",
+              "action": "check",
+              "amount": 0,
+              "stack": 78
+            },
+            {
+              "player": "あなた",
+              "stage": "リバー",
+              "action": "check",
+              "amount": 0,
+              "stack": 78
+            }
+          ]
+        },
+        {
+          "playerInfo": {
+            "name": "CPU1",
+            "position": "SB",
+            "isUser": false
+          },
+          "chipInfo": {
+            "startingStack": 100,
+            "profit": null,
+            "anteAndBlinds": 4
+          },
+          "handInfo": {
+            "holeCards": [
+              "A♣",
+              "A♦"
+            ],
+            "folded": true,
+            "showedDown": false
+          },
+          "actionSummary": {
+            "folds": 1,
+            "calls": 0,
+            "raises": 0,
+            "totalAmountBet": 0
+          },
+          "detailedActions": [
+            {
+              "player": "CPU1",
+              "stage": "プリフロップ",
+              "action": "fold",
+              "amount": 0,
+              "stack": 96
+            }
+          ]
+        },
+        {
+          "playerInfo": {
+            "name": "CPU2",
+            "position": "BB",
+            "isUser": false
+          },
+          "chipInfo": {
+            "startingStack": 100,
+            "profit": null,
+            "anteAndBlinds": 6
+          },
+          "handInfo": {
+            "holeCards": [
+              "9♠",
+              "K♥"
+            ],
+            "folded": false,
+            "showedDown": false
+          },
+          "actionSummary": {
+            "folds": 0,
+            "calls": 2,
+            "raises": 0,
+            "totalAmountBet": 16
+          },
+          "detailedActions": [
+            {
+              "player": "CPU2",
+              "stage": "プリフロップ",
+              "action": "call",
+              "amount": 6,
+              "stack": 88
+            },
+            {
+              "player": "CPU2",
+              "stage": "フロップ",
+              "action": "check",
+              "amount": 0,
+              "stack": 88
+            },
+            {
+              "player": "CPU2",
+              "stage": "フロップ",
+              "action": "call",
+              "amount": 10,
+              "stack": 78
+            },
+            {
+              "player": "CPU2",
+              "stage": "ターン",
+              "action": "check",
+              "amount": 0,
+              "stack": 78
+            },
+            {
+              "player": "CPU2",
+              "stage": "リバー",
+              "action": "check",
+              "amount": 0,
+              "stack": 78
+            }
+          ]
+        },
+        {
+          "playerInfo": {
+            "name": "CPU3",
+            "position": "UTG",
+            "isUser": false
+          },
+          "chipInfo": {
+            "startingStack": 100,
+            "profit": null,
+            "anteAndBlinds": 3
+          },
+          "handInfo": {
+            "holeCards": [
+              "3♠",
+              "8♦"
+            ],
+            "folded": true,
+            "showedDown": false
+          },
+          "actionSummary": {
+            "folds": 1,
+            "calls": 0,
+            "raises": 0,
+            "totalAmountBet": 0
+          },
+          "detailedActions": [
+            {
+              "player": "CPU3",
+              "stage": "プリフロップ",
+              "action": "fold",
+              "amount": 0,
+              "stack": 97
+            }
+          ]
+        },
+        {
+          "playerInfo": {
+            "name": "CPU4",
+            "position": "HJ",
+            "isUser": false
+          },
+          "chipInfo": {
+            "startingStack": 100,
+            "profit": null,
+            "anteAndBlinds": 3
+          },
+          "handInfo": {
+            "holeCards": [
+              "5♦",
+              "9♦"
+            ],
+            "folded": true,
+            "showedDown": false
+          },
+          "actionSummary": {
+            "folds": 1,
+            "calls": 0,
+            "raises": 0,
+            "totalAmountBet": 0
+          },
+          "detailedActions": [
+            {
+              "player": "CPU4",
+              "stage": "プリフロップ",
+              "action": "fold",
+              "amount": 0,
+              "stack": 97
+            }
+          ]
+        },
+        {
+          "playerInfo": {
+            "name": "CPU5",
+            "position": "CO",
+            "isUser": false
+          },
+          "chipInfo": {
+            "startingStack": 100,
+            "profit": null,
+            "anteAndBlinds": 3
+          },
+          "handInfo": {
+            "holeCards": [
+              "4♣",
+              "A♥"
+            ],
+            "folded": true,
+            "showedDown": false
+          },
+          "actionSummary": {
+            "folds": 1,
+            "calls": 0,
+            "raises": 0,
+            "totalAmountBet": 0
+          },
+          "detailedActions": [
+            {
+              "player": "CPU5",
+              "stage": "プリフロップ",
+              "action": "fold",
+              "amount": 0,
+              "stack": 97
+            }
+          ]
+        }
+      ],
+      "winnerInfo": {
+        "winners": [
+          {
+            "name": "CPU2",
+            "position": "BB",
+            "hand": [
+              "9♠",
+              "K♥",
+              "2♦",
+              "2♣",
+              "K♠"
+            ],
+            "handRank": "ツーペア",
+            "amountWon": 57
+          }
+        ],
+        "totalWinAmount": 57
+      },
+      "chronologicalActions": [
+        {
+          "actionNumber": 1,
+          "stage": "プリフロップ",
+          "player": "CPU3",
+          "action": "fold",
+          "amount": 0,
+          "stackAfterAction": 97,
+          "timestamp": "2025-06-03T14:43:45.069Z"
+        },
+        {
+          "actionNumber": 2,
+          "stage": "プリフロップ",
+          "player": "CPU4",
+          "action": "fold",
+          "amount": 0,
+          "stackAfterAction": 97,
+          "timestamp": "2025-06-03T14:43:45.069Z"
+        },
+        {
+          "actionNumber": 3,
+          "stage": "プリフロップ",
+          "player": "CPU5",
+          "action": "fold",
+          "amount": 0,
+          "stackAfterAction": 97,
+          "timestamp": "2025-06-03T14:43:45.069Z"
+        },
+        {
+          "actionNumber": 4,
+          "stage": "プリフロップ",
+          "player": "あなた",
+          "action": "raise",
+          "amount": 9,
+          "stackAfterAction": 88,
+          "timestamp": "2025-06-03T14:43:45.069Z"
+        },
+        {
+          "actionNumber": 5,
+          "stage": "プリフロップ",
+          "player": "CPU1",
+          "action": "fold",
+          "amount": 0,
+          "stackAfterAction": 96,
+          "timestamp": "2025-06-03T14:43:45.069Z"
+        },
+        {
+          "actionNumber": 6,
+          "stage": "プリフロップ",
+          "player": "CPU2",
+          "action": "call",
+          "amount": 6,
+          "stackAfterAction": 88,
+          "timestamp": "2025-06-03T14:43:45.069Z"
+        },
+        {
+          "actionNumber": 7,
+          "stage": "フロップ",
+          "player": "CPU2",
+          "action": "check",
+          "amount": 0,
+          "stackAfterAction": 88,
+          "timestamp": "2025-06-03T14:43:45.069Z"
+        },
+        {
+          "actionNumber": 8,
+          "stage": "フロップ",
+          "player": "あなた",
+          "action": "bet",
+          "amount": 10,
+          "stackAfterAction": 78,
+          "timestamp": "2025-06-03T14:43:45.069Z"
+        },
+        {
+          "actionNumber": 9,
+          "stage": "フロップ",
+          "player": "CPU2",
+          "action": "call",
+          "amount": 10,
+          "stackAfterAction": 78,
+          "timestamp": "2025-06-03T14:43:45.069Z"
+        },
+        {
+          "actionNumber": 10,
+          "stage": "ターン",
+          "player": "CPU2",
+          "action": "check",
+          "amount": 0,
+          "stackAfterAction": 78,
+          "timestamp": "2025-06-03T14:43:45.069Z"
+        },
+        {
+          "actionNumber": 11,
+          "stage": "ターン",
+          "player": "あなた",
+          "action": "check",
+          "amount": 0,
+          "stackAfterAction": 78,
+          "timestamp": "2025-06-03T14:43:45.069Z"
+        },
+        {
+          "actionNumber": 12,
+          "stage": "リバー",
+          "player": "CPU2",
+          "action": "check",
+          "amount": 0,
+          "stackAfterAction": 78,
+          "timestamp": "2025-06-03T14:43:45.069Z"
+        },
+        {
+          "actionNumber": 13,
+          "stage": "リバー",
+          "player": "あなた",
+          "action": "check",
+          "amount": 0,
+          "stackAfterAction": 78,
+          "timestamp": "2025-06-03T14:43:45.069Z"
+        }
+      ]
+    }
+  ]
+}

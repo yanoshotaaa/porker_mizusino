@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>テキサスホールデム ハンド分析AI</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>🃏 テキサスホールデム ハンド分析AI</h1>
+      <p>プレイデータを分析して、戦略的なフィードバックを提供します</p>
+    </div>
+
+    <div class="upload-section">
+      <h2>📁 ハンドデータをアップロード</h2>
+      <p>JSONファイルを選択してください</p>
+      <input type="file" id="fileInput" class="file-input" accept=".json">
+
+      <button class="upload-btn" onclick="document.getElementById('fileInput').click()">
+        📎 ファイルを選択
+      </button>
+      <button class="demo-btn" onclick="loadDemoData()">
+        🎮 デモデータで試す
+      </button>
+
+      <div class="json-format">
+        期待されるJSONフォーマット:
+
+        【方法1】分析用フォーマット:
+        {
+        "hands": [
+        {
+        "hand_id": 1,
+        "your_cards": ["Ah", "Kd"],
+        "community_cards": ["Qh", "Jc", "10s", "9h", "8d"],
+        "position": "button",
+        "actions": [
+        {"street": "preflop", "action": "raise", "amount": 100}
+        ],
+        "result": "loss",
+        "pot_size": 800
+        }
+        ]
+        }
+
+        【方法2】元のゲームアプリの履歴ファイル（旧版）:
+        [
+        {
+        "players": [...],
+        "board": ["Q♥", "J♣", "10♠"],
+        "pot": 800,
+        "profit": -50,
+        ...
+        }
+        ]
+
+        【方法3】元のゲームアプリの履歴ファイル（新版）:
+        {
+        "games": [
+        {
+        "gameInfo": { "gameNumber": 1, ... },
+        "playerDetails": [...],
+        "gameStats": { "boardCards": [...] },
+        ...
+        }
+        ]
+        }
+      </div>
+    </div>
+
+    <div id="analysisSection" class="analysis-section">
+      <h2>📊 分析結果</h2>
+      <div id="statsGrid" class="stats-grid"></div>
+      <div id="rangeAnalysis" class="range-analysis-section"></div>
+      <div id="gtoAnalysis"></div>
+      <div id="handsAnalysis"></div>
+    </div>
+  </div>
+
+
+  <script src="script.js"></script>
+</body>
+
+</html>
